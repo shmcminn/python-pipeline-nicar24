@@ -5,3 +5,4 @@ pyvenv.cfg
 etc/
 share/
 .ipynb*
+google_auth_secret.json
