@@ -29,6 +29,7 @@ jobs:
        git config remote.origin.url https://github.com/shmcminn/python-pipeline-nicar24.git
        git config --global user.name "$(git --no-pager log --format=format:'%an' -n 1)"
        git config --global user.email "$(git --no-pager log --format=format:'%ae' -n 1)"
+       git add .
        git commit -m "Automated commit from GitHub Actions"
        git push origin HEAD:main
     
