@@ -24,8 +24,8 @@ jobs:
    # Step 4   
    - name: commit
      run: |
-       git config --global user.email "your.email@example.com"
-       git config --global user.name "Your Name"
+       git config --global user.email "seanpm92@gmail.com"
+       git config --global user.name "shmcminn"
        git add .
        git commit -m "Automated commit from GitHub Actions"
        git push
