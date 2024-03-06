@@ -26,8 +26,8 @@ jobs:
    # Step 4   
    - name: commit
      run: |
-       git config --global user.email "seanpm92@gmail.com"
-       git config --global user.name "shmcminn"
+       git config user.name "Automated"
+       git config user.email "actions@users.noreply.github.com"
        git add .
        git commit -m "Automated commit from GitHub Actions"
        git push origin HEAD:main
