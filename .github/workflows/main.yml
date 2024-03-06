@@ -25,7 +25,7 @@ jobs:
      run: jupyter execute pipeline.ipynb
    # Step 4   
    - name: Commit files
-      run: |
+     run: |
        git config remote.origin.url https://github.com/<username>/<repo>.git
        git config --global user.name "$(git --no-pager log --format=format:'%an' -n 1)"
        git config --global user.email "$(git --no-pager log --format=format:'%ae' -n 1)"
