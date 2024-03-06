@@ -10,6 +10,7 @@ on:
 permissions:
   contents: write
   packages: write
+  pull: write
 
 jobs:
  scrape:
@@ -36,5 +37,6 @@ jobs:
        git config --global user.email "$(git --no-pager log --format=format:'%ae' -n 1)"
        git add .
        git commit -m "Automated commit from GitHub Actions"
+       git pull
        git push origin HEAD:main
     
