@@ -10,7 +10,7 @@ on:
 permissions:
   contents: write
   packages: write
-  pull: write
+  pull-requests: write
 
 jobs:
  scrape:
