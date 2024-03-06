@@ -20,8 +20,7 @@ jobs:
      uses: actions/checkout@v2
      with:
        fetch-depth: 0
-       persist-credentials: false # otherwise, the token used is the GITHUB_TOKEN, instead of your personal access token.
-
+       
    # Step 2: Install requirements, so Python script can run
    - name: Install requirements
      # this may change depending on how we handle dependencies
