@@ -28,5 +28,5 @@ jobs:
        git config --global user.name "shmcminn"
        git add .
        git commit -m "Automated commit from GitHub Actions"
-       git push
+       git push origin HEAD:main
     
