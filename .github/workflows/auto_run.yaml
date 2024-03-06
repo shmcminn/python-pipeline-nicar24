@@ -1,0 +1,36 @@
+name: Run Jupyter Notebook
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  run_notebook:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v2
+
+    - name: Set up Python
+      uses: actions/setup-python@v2
+      with:
+        python-version: '3.x' # Specify the Python version you need
+
+    - name: Install dependencies
+      run: |
+        pip install -r requirements.txt
+
+    - name: Run Jupyter Notebook
+      run: |
+        jupyter execute execute pipeline.ipynb
+
+
+    - name: Commit changes
+      run: |
+        git config --global user.email "seanpm92@gmail.com"
+        git config --global user.name "shmcminn"
+        git add .
+        git commit -m "Automated commit from GitHub Actions"
+        git push
