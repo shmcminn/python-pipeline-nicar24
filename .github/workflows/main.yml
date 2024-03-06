@@ -20,5 +20,8 @@ jobs:
      run: pip install -r requirements.txt
    # Step 3   
    - name: Run scraper
-     # want to check if we need python -m on both this and above action item 
      run: jupyter execute pipeline.ipynb
+   # Step 4   
+   - name: commit
+     run: git commit -am "auto run"
+    
