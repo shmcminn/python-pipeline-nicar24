@@ -23,8 +23,10 @@ jobs:
      run: jupyter execute pipeline.ipynb
    # Step 4   
    - name: commit
-     run:
-        git config --global user.email "you@example.com"
-        git config --global user.name "Your Name"
-        git commit -am "auto run"
+     run: |
+       git config --global user.email "your.email@example.com"
+       git config --global user.name "Your Name"
+       git add .
+       git commit -m "Automated commit from GitHub Actions"
+       git push
     
