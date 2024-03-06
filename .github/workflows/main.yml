@@ -38,5 +38,5 @@ jobs:
        git add .
        git commit -m "Automated commit from GitHub Actions"
        git pull --rebase
-       git push origin HEAD:main
+       git push 
     
