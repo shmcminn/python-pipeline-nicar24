@@ -2,6 +2,7 @@ name: Run Jupyter Notebook
 
 
 on:
+  workflow_dispatch:
   push:
     branches:
       - main
