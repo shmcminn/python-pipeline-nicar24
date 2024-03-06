@@ -1,9 +1,6 @@
 # name: Scrape latest data
 on:
  workflow_dispatch:
- push:
-    branches:
-      - main
  schedule:
    - cron:  '0 * * * *'
 
@@ -37,6 +34,6 @@ jobs:
        git config --global user.email "$(git --no-pager log --format=format:'%ae' -n 1)"
        git add .
        git commit -m "Automated commit from GitHub Actions"
-       git pull --rebase
+       git pull
        git push 
     
