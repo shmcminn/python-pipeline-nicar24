@@ -29,7 +29,7 @@ jobs:
 
     - name: Run Jupyter Notebook
       run: |
-        jupyter execute execute pipeline.ipynb
+        jupyter execute pipeline.ipynb
 
 
     - name: Commit changes
