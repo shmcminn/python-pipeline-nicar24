@@ -23,9 +23,18 @@ jobs:
    - name: Install requirements
      # this may change depending on how we handle dependencies
      run: pip install -r requirements.txt
+
+   # Optional: If you are publishing to Google sheets, uncomment these next 3 lines
+   - name: Set environment variable
+     env: # Or as an environment variable
+      GOOGLE_SECRET_KEY: ${{ secrets.GOOGLE_SECRET_KEY }}
+
    # Step 3   
    - name: Run scraper
-     run: jupyter execute pipeline.ipynb
+     run: |
+      jupyter execute pipeline.ipynb
+      jupyter execute google\ sheets\ code.ipynb
+      
    # Step 4   
    - name: Commit files
      run: |
