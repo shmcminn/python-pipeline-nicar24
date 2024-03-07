@@ -2,7 +2,7 @@
 on:
  workflow_dispatch:
  schedule:
-   - cron:  '0 * * * *'
+   - cron:  '0 */12 * * *'
 
 permissions:
   contents: write
@@ -27,14 +27,12 @@ jobs:
 
    # Step 3   
    - name: Run scraper
-   
-  # Optional: If you are publishing to Google sheets, uncomment these next 4 lines
-     env: # Or as an environment variable
-      GOOGLE_SECRET_KEY: ${{ secrets.GOOGLE_SECRET_KEY }}
 
-     run: |
-      jupyter execute pipeline.ipynb
-      jupyter execute google\ sheets\ code.ipynb
+  # Optional: If you are publishing to Google sheets, uncomment these next 2 lines
+     #env: 
+      #GOOGLE_SECRET_KEY: ${{ secrets.GOOGLE_SECRET_KEY }}
+
+     run: jupyter execute pipeline.ipynb
 
    # Step 4   
    - name: Commit files
