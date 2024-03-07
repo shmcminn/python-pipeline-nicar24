@@ -8,3 +8,4 @@ share/
 google_auth_secret.json
 exported_data/*
 !exported_data/.gitkeep
+!exported_data/county_frequency.csv
